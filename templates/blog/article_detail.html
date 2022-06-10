@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+<!-- Page Header-->
+{% block heading %}
+<div class="text-center">
+    <h1>{{ article.title }}</h1>
+    <h3>{{ article.subtitle }}</h3>
+    <p>Published on <strong>{{ article.publish_date }}</strong> by <em>{{ article.author }}</em></p>
+    <br>
+</div>
+{% endblock %}
+<!-- Main Content-->
+{% block content %}
+    <div class="container">
+    {{ article.content|safe }}
+    </div>
+{% endblock %}
